@@ -1,6 +1,3 @@
-// Shared vocabulary for the audience domain.
-// `as const` turns these arrays into readonly tuples, so TypeScript can derive
-// precise union types from them (e.g. EventType = "page_view" | "product_view" | ...).
 
 export const EVENT_TYPES = [
   "page_view",
@@ -8,11 +5,12 @@ export const EVENT_TYPES = [
   "add_to_cart",
   "checkout_started",
   "purchase",
+
 ] as const;
 
 export type EventType = (typeof EVENT_TYPES)[number];
 
-export const OPERATORS = ["at_least", "exactly"] as const;
+export const OPERATORS = ["at_least", "exactly","at_most"] as const;
 
 export type Operator = (typeof OPERATORS)[number];
 

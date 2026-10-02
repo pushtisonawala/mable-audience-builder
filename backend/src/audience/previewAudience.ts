@@ -14,9 +14,9 @@ export interface PreviewResponse {
   asOf: string;
   total: number;
   members: Member[];
+  conditionCount:number;
 }
 
-/** Evaluates an audience definition relative to `asOf` (never the server clock). */
 export function previewAudience(db: Database.Database, request: PreviewRequest): PreviewResponse {
   const asOfMs = Date.parse(request.asOf);
 
@@ -28,5 +28,6 @@ export function previewAudience(db: Database.Database, request: PreviewRequest):
     asOf: new Date(asOfMs).toISOString(),
     total: members.length,
     members,
+conditionCount:request.conditions.length
   };
 }
