@@ -120,6 +120,13 @@ export const SEED_EVENTS: SeedEvent[] = [
     ["product_view", daysBefore(11)],
     ["product_view", daysBefore(10)],
   ]),
+
+  // anon_1014 — match: 3 product views in the last 2 days, no purchase.
+  ...user("anon_1014", [
+    ["product_view", daysBefore(1.9)],
+    ["product_view", daysBefore(1.8)],
+    ["product_view", daysBefore(0.2)],
+  ]),
 ];
 
 /** Replaces all events with SEED_EVENTS. Runs in one transaction: all or nothing. */
