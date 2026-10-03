@@ -79,7 +79,7 @@ describe("validation errors", () => {
     const res = await preview({
       ...validBody,
       conditions: [
-        { eventType: "click", operator: "at_most", count: -1, withinDays: 7 },
+        { eventType: "click", operator: "more_than", count: -1, withinDays: 7 },
         { eventType: "purchase", operator: "exactly", count: 0, withinDays: 0 },
       ],
     });

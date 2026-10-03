@@ -19,6 +19,12 @@ describe("satisfies", () => {
     expect(satisfies("exactly", 2, 3)).toBe(false);
   });
 
+  it("at_most passes on the boundary and below, fails above", () => {
+    expect(satisfies("at_most", 2, 1)).toBe(true);
+    expect(satisfies("at_most", 2, 2)).toBe(true);
+    expect(satisfies("at_most", 2, 3)).toBe(false);
+  });
+
   it("exactly 0 matches users with no events", () => {
     expect(satisfies("exactly", 0, 0)).toBe(true);
     expect(satisfies("exactly", 0, 1)).toBe(false);

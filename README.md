@@ -85,7 +85,7 @@ curl -s -X POST http://localhost:4000/v1/audiences/preview \
 
 - `GET /health` returns `{"status":"ok"}`.
 - Every error response has the same shape: `{"error":{"code","message","details?":[{"path","message"}]}}`. Codes: `VALIDATION_ERROR` (400), `INVALID_JSON` (400), `PAYLOAD_TOO_LARGE` (413), `NOT_FOUND` (404), `INTERNAL_ERROR` (500).
-- Request rules: 1 to 10 conditions; `eventType` is one of `page_view`, `product_view`, `add_to_cart`, `checkout_started`, `purchase`; `operator` is `at_least` or `exactly`; `count` is a whole number from 0 to 10000; `withinDays` is a whole number from 1 to 365; unknown fields are rejected.
+- Request rules: 1 to 10 conditions; `eventType` is one of `page_view`, `product_view`, `add_to_cart`, `checkout_started`, `purchase`; `operator` is `at_least`, `exactly` or `at_most`; `count` is a whole number from 0 to 10000; `withinDays` is a whole number from 1 to 365; unknown fields are rejected.
 
 ## Configuration
 

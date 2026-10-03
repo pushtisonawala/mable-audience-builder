@@ -10,7 +10,7 @@ export const EVENT_TYPES = [
 ] as const;
 export type EventType = (typeof EVENT_TYPES)[number];
 
-export const OPERATORS = ["at_least", "exactly"] as const;
+export const OPERATORS = ["at_least", "exactly", "at_most"] as const;
 export type Operator = (typeof OPERATORS)[number];
 
 export interface Condition {
@@ -39,6 +39,7 @@ export interface PreviewResponse {
   name: string;
   asOf: string;
   total: number;
+  conditionCount: number;
   members: Member[];
 }
 

@@ -13,6 +13,7 @@ export const EVENT_TYPE_LABELS: Record<EventType, string> = {
 export const OPERATOR_LABELS: Record<Operator, string> = {
   at_least: "at least",
   exactly: "exactly",
+  at_most: "at most",
 };
 
 const utcFormatter = new Intl.DateTimeFormat("en-GB", {

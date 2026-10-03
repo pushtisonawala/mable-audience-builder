@@ -10,6 +10,7 @@ const twoMembers: PreviewResponse = {
   name: "Viewed but not purchased",
   asOf: "2026-09-29T00:00:00.000Z",
   total: 2,
+  conditionCount: 2,
   members: [
     {
       anonymousId: "anon_1001",

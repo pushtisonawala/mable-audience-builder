@@ -6,6 +6,7 @@ I used **Claude Code** (model: Claude Opus 5.5) as my coding partner on this pro
 
 - **Planning.** Before any code, I used it to break the brief into small steps and to compare options: Go or TypeScript for the backend, how to store time, and how to find users who bought nothing.
 - **Research and learning.** When something was new to me, I asked it to explain using real examples from our own data until I understood it. For example: how the 7-day window works, why we start from all users, and how the database counts events.
+- **Writing code.** It wrote most of the code, tests and docs, one small step at a time. I reviewed each step, asked questions until I understood it, and made changes myself.
 - **Checking.** It ran the tests, broke one line on purpose to prove the tests would catch it, and clicked through the app in a browser, including turning the backend off to test the error and Retry screen.
 
 ## What I did

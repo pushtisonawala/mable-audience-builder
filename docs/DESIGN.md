@@ -40,7 +40,7 @@ A small function takes each user's counts and:
 2. checks each condition (`at_least` means `>=`, `exactly` means `===`),
 3. keeps the user only if **every** condition passes (`.every()`, which is the AND).
 
-**Why split it?** The database is good at counting, and the "who passes" rules sit in one tiny function with no database or clock, easy to test with made-up numbers. A new operator like `at_most` is one list entry plus one `case`; TypeScript complains if the case is missing.
+**Why split it?** The database is good at counting, and the "who passes" rules sit in one tiny function with no database or clock, easy to test with made-up numbers. Adding `at_most` took one list entry plus one `case`; TypeScript complains if the case is missing.
 
 Evidence repeats the whole condition, because two conditions can share an event type with different windows. Results are sorted by user id for stable output.
 

@@ -24,8 +24,8 @@ export function satisfies(operator: Operator, required: number, observed: number
       return observed >= required;
     case "exactly":
       return observed === required;
-      case "at_most":
-        return observed <= required;
+    case "at_most":
+      return observed <= required;
   }
 }
 
